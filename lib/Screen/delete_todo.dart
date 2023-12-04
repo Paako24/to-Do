@@ -8,7 +8,7 @@ class DeleteTodoForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text("Yakin mau hapus?s"),
+      title: Text("Yakin mau hapus?"),
       actions: [
         TextButton(
           onPressed: () {

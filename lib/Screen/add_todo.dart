@@ -16,14 +16,13 @@ class AddTodoForm extends StatefulWidget {
   _AddTodoFormState createState() => _AddTodoFormState();
 }
 
-class _AddTodoFormState extends State < AddTodoForm > {
-  final _formKey = GlobalKey < FormState > ();
+class _AddTodoFormState extends State <AddTodoForm> {
+  final _formKey = GlobalKey <FormState> ();
   late String description;
 
   @override
   Widget build(BuildContext context) {
-    final todoController = Get.find < TodoController > ();
-
+    final todoController = Get.find <TodoController> ();
     return Scaffold(
       body: Container(
         key: _formKey,

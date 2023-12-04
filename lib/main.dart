@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: HomeScreen(),
-      initialBinding: ScreenBinding(),
+      initialBinding: HomeBinding(),
     );
   }
 }

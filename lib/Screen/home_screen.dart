@@ -10,10 +10,10 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State < HomeScreen > {
+class _HomeScreenState extends State <HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final todoController = Get.find < TodoController > ();
+    final todoController = Get.find <TodoController> ();
     return Scaffold(
       appBar: AppBar(
         title: Text("Todo App"),
@@ -49,7 +49,7 @@ class _HomeScreenState extends State < HomeScreen > {
                         todoController.todos[index].description,
                         style: TextStyle(
                           color: todoController.todos[index].isCompleted
-                              ? Colors.black54 // Set text color to grey if checked
+                              ? Colors.black54 
                               : Colors.black,
 
                           decoration: todoController.todos[index].isCompleted
