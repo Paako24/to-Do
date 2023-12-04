@@ -12,6 +12,7 @@ class AddTodoForm extends StatefulWidget {
     required this.type,
     required this.todo
   }): super(key: key);
+  
   @override
   _AddTodoFormState createState() => _AddTodoFormState();
 }
