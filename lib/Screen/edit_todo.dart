@@ -70,7 +70,6 @@ class _EditTodoFormState extends State <EditTodoForm> {
                           ),
                       ),
                     ),
-                    // ignore: deprecated_member_use
                     SizedBox(
                       width: 150,
                       height: 50,

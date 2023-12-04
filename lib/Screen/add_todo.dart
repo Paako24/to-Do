@@ -12,7 +12,7 @@ class AddTodoForm extends StatefulWidget {
     required this.type,
     required this.todo
   }): super(key: key);
-  
+
   @override
   _AddTodoFormState createState() => _AddTodoFormState();
 }
@@ -68,7 +68,6 @@ class _AddTodoFormState extends State <AddTodoForm> {
                           ),
                       ),
                     ),
-                    // ignore: deprecated_member_use
                     SizedBox(
                       width: 150,
                       height: 50,
