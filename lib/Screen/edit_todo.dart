@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Controller/todo_controller.dart';
 import '../Model/model.dart';
+import '../Utils/button.dart';
 
 class EditTodoForm extends StatefulWidget {
   final Todo todo;
@@ -45,47 +46,24 @@ class _EditTodoFormState extends State <EditTodoForm> {
                       ),
                   ),
                 ),
-                Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      width: 150,
-                      height: 50,
-                      child: ElevatedButton(
-                        child: const Text('Cancel',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),
-                          ),
-                          onPressed: () {
-                            Get.back();
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,
-                            textStyle: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                      ),
+                    CustomElevatedButton(
+                      text: 'Cancel',
+                      color: Colors.red,
+                      onPressed: () {
+                        Get.back();
+                      },
                     ),
-                    SizedBox(
-                      width: 150,
-                      height: 50,
-                      child: ElevatedButton(
-                        child: const Text(
-                            'Update',
-                            style: TextStyle(
-                              color: Colors.white
-                            ), ),
-                          onPressed: () {
-                            _formKey.currentState!.save();
-                            todoController.updateTodo(widget.todo, description);
-                            Get.back();
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green,
-                          ),
-                      ),
+                    CustomElevatedButton(
+                      text: 'Tambah',
+                      color: Colors.green,
+                      onPressed: () {
+                        _formKey.currentState?.save();
+                        todoController.addTodo(Todo(description: description));
+                        Get.back();
+                      },
                     ),
                   ],
                 ),
