@@ -19,14 +19,13 @@ class AddTodoForm extends StatefulWidget {
 
 class _AddTodoFormState extends State <AddTodoForm> {
   final _formKey = GlobalKey <FormState> ();
-  late String description;
+  late String description = '';
 
   @override
   Widget build(BuildContext context) {
     final todoController = Get.find <TodoController> ();
     return Scaffold(
       body: Container(
-        key: _formKey,
         padding: const EdgeInsets.all(40),
           child: Form(
             key: _formKey,
@@ -36,7 +35,7 @@ class _AddTodoFormState extends State <AddTodoForm> {
                   child: TextFormField(
                     onSaved: (value) => description = value!,
                     decoration: const InputDecoration(
-                        hintText: "Apa yang kamu ingin kerjakan",
+                        hintText: "Masukkan Todo",
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
                       ),
@@ -48,7 +47,6 @@ class _AddTodoFormState extends State <AddTodoForm> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // ignore: deprecated_member_use
                     SizedBox(
                       width: 150,
                       height: 50,
@@ -58,7 +56,7 @@ class _AddTodoFormState extends State <AddTodoForm> {
                               color: Colors.white
                             ), ),
                           onPressed: () {
-                            Navigator.of(context).pop();
+                           Get.back();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
@@ -77,9 +75,9 @@ class _AddTodoFormState extends State <AddTodoForm> {
                               color: Colors.white
                             ), ),
                           onPressed: () {
-                            _formKey.currentState!.save();
+                            _formKey.currentState?.save();
                             todoController.addTodo(Todo(description: description));
-                            Navigator.of(context).pop();
+                           Get.back();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,

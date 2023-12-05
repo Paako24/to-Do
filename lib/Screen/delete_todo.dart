@@ -21,7 +21,7 @@ class DeleteTodoForm extends StatelessWidget {
             onConfirm();
             Navigator.pop(context);
           },
-          child: Text("Delete", style: TextStyle(color: Colors.red),),
+          child: Text("Hapus", style: TextStyle(color: Colors.red),),
         ),
       ],
     );

@@ -26,7 +26,6 @@ class _EditTodoFormState extends State <EditTodoForm> {
     final todoController = Get.find <TodoController> ();
     return Scaffold(
       body: Container(
-        key: _formKey,
         padding: const EdgeInsets.all(40),
           child: Form(
             key: _formKey,
@@ -49,7 +48,6 @@ class _EditTodoFormState extends State <EditTodoForm> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // ignore: deprecated_member_use
                     SizedBox(
                       width: 150,
                       height: 50,
@@ -60,7 +58,7 @@ class _EditTodoFormState extends State <EditTodoForm> {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.of(context).pop();
+                            Get.back();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
@@ -82,7 +80,7 @@ class _EditTodoFormState extends State <EditTodoForm> {
                           onPressed: () {
                             _formKey.currentState!.save();
                             todoController.updateTodo(widget.todo, description);
-                            Navigator.of(context).pop();
+                            Get.back();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
