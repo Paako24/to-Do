@@ -15,7 +15,9 @@ class _HomeScreenState extends State <HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFf5f5f5),
       appBar: AppBar(
+        backgroundColor: Color(0xFFf5f5f5),
         title: Text("Todo App"),
       ),
       body: GetBuilder(
@@ -24,7 +26,7 @@ class _HomeScreenState extends State <HomeScreen> {
             itemCount: todoController.todos.length,
             itemBuilder: (context, index) {
               return Card(
-                color: Color(0xFFEEEFF5),
+                color: Color(0xFFF5F5F5),
                 child: Column(
                   children: [
                     ListTile(
@@ -63,7 +65,7 @@ class _HomeScreenState extends State <HomeScreen> {
                             context: context,
                             builder: (BuildContext context) {
                               return DeleteTodoForm(
-                                onConfirm: () {
+                                onConfirm: (){
                                   todoController.deleteTodo(todoController.todos[index].id);
                                 },
                               );
@@ -83,6 +85,7 @@ class _HomeScreenState extends State <HomeScreen> {
       ),
 
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xFFFF6600),
         onPressed: () {
           showModalBottomSheet(
             context: context,
@@ -93,7 +96,7 @@ class _HomeScreenState extends State <HomeScreen> {
             },
           );
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.add, color: Color(0xFFffffff),),
       ),
     );
   }

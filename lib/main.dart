@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:refactor/Binding/binding.dart';
-import '../Controller/todo_controller.dart';
 import '../Screen/home_screen.dart';
 
 void main() {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DeleteTodoForm extends StatelessWidget {
   final Function onConfirm;
@@ -12,14 +13,14 @@ class DeleteTodoForm extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
           child: Text("Cancel"),
         ),
         TextButton(
           onPressed: () {
             onConfirm();
-            Navigator.pop(context);
+            Get.back();
           },
           child: Text("Hapus", style: TextStyle(color: Colors.red),),
         ),

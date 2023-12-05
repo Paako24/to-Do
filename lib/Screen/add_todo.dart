@@ -48,14 +48,14 @@ class _AddTodoFormState extends State < AddTodoForm > {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomElevatedButton(
+                    CustomButton(
                       text: 'Cancel',
                       color: Colors.red,
                       onPressed: () {
                       Get.back();
                       },
                     ),
-                    CustomElevatedButton(
+                    CustomButton(
                       text: 'Tambah',
                       color: Colors.green,
                       onPressed: () {

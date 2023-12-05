@@ -49,14 +49,14 @@ class _EditTodoFormState extends State <EditTodoForm> {
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    CustomElevatedButton(
+                    CustomButton(
                       text: 'Cancel',
                       color: Colors.red,
                       onPressed: () {
                         Get.back();
                       },
                     ),
-                    CustomElevatedButton(
+                    CustomButton(
                       text: 'Tambah',
                       color: Colors.green,
                       onPressed: () {
