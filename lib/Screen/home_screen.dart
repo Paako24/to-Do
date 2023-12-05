@@ -13,7 +13,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State <HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final todoController = Get.find <TodoController> ();
     return Scaffold(
       appBar: AppBar(
         title: Text("Todo App"),
